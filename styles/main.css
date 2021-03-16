@@ -38,10 +38,8 @@ img{
 
 .container {
 	margin: auto;
-	/*padding: 55px;*/
 	margin-top: 150px;
 	width: 250px;
-	/*border: 1px solid white;*/
 	border-radius: 10px;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -122,7 +120,7 @@ h1 {
 
 /*----------------Tablet style---------------------*/
 
-@media only screen and (min-width: 845px) /*and (max-width: 1000px)*/{
+@media only screen and (min-width: 845px){
 
 	#logo figure {
 		width: 15%;
@@ -139,7 +137,7 @@ h1 {
 
 /*----------------Laptop style---------------------*/
 
-@media only screen and (min-width: 1001px) /*and (max-width: 1000px)*/{
+@media only screen and (min-width: 1001px){
 
 	#logo figure {
 		width: 13%;

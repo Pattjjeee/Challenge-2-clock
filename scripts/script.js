@@ -1,14 +1,12 @@
+// Zorgt ervoor dat de datum weergeven wordt
+
 function datum(){
-var today = new Date();
-
-document.getElementById('date').innerHTML = today.getDate() + '/' + (today.getMonth()+1);
-
-var maanden = new Array('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december');
-document.getElementById('date').innerHTML = today.getDate() + ' ' + maanden[today.getMonth()];
-
-var dagen = new Array('zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
-
-document.getElementById('dag').innerHTML = dagen[today.getDay()];
+	var today = new Date();
+	document.getElementById('date').innerHTML = today.getDate() + '/' + (today.getMonth()+1);
+	var maanden = new Array('januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december');
+	document.getElementById('date').innerHTML = today.getDate() + ' ' + maanden[today.getMonth()];
+	var dagen = new Array('zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
+	document.getElementById('dag').innerHTML = dagen[today.getDay()];
 }
 
 function klok() {
@@ -56,10 +54,9 @@ function klok() {
 	}
 
 	document.getElementById('clock').innerHTML = hour + ':' + minutes + ':' + seconds;
-
 }
 
-// Laat de klok iedere seconde verversen
+// Laat de klok en datum iedere seconde verversen
 
 klok();
 setInterval(klok, 1000);
