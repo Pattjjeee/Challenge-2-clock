@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	height: 100vh;
+	color: white;
+	font-family: all-round-gothic, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	width: 100vw;
+}
+
+header {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+#logo figure {
+	width: 25%;
+}
+
+img{
+	max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.p-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.container {
+	margin: auto;
+	/*padding: 55px;*/
+	margin-top: 150px;
+	width: 250px;
+	/*border: 1px solid white;*/
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+	"tijd tijd tijd"
+	"dag dag icon"
+	"date date icon";
+}
+
+
+.klok {
+	grid-area: tijd;
+}
+
+.dag {
+	grid-area: dag;
+	font-size: 2em;
+	font-weight: 100;
+}
+
+.datum {
+	grid-area: date;
+	font-size: 2em;
+}
+
+.icon {
+	grid-area: icon;
+}
+
+h1 {
+	font-size: 4.8em;
+	font-weight: 100;
+}
+
+
+/*CSS wat communiceert met js*/
+
+
+.ochtend,
+.middag,
+.avond,
+.nacht {
+	background-repeat: no-repeat;
+	transition: background 1s ease-in-out;
+}
+
+.ochtend {
+	/*ochtend*/
+	background: rgb(138,160,15);
+	background: linear-gradient(180deg, rgba(138,160,15,1) 0%, rgba(95,95,95,1) 100%);
+}
+
+.middag {
+  	/*middag*/
+	background: rgb(160,111,15);
+	background: linear-gradient(180deg, rgba(160,111,15,100) 0%, rgba(95,95,95,1) 100%);
+}
+
+.avond {
+	/*avond*/
+	background: rgb(4,32,56);
+	background: linear-gradient(180deg, rgba(4,32,56,100) 0%, rgba(95,95,95,1) 100%);
+}
+
+.nacht {
+	/*avond*/
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,100) 0%, rgba(95,95,95,1) 100%);
+}
+
+#clock {
+	transition: opacity 1s ease-in-out;
+}
+
+.animate {
+	opacity: 0.5;
+}
+
+/*----------------Tablet style---------------------*/
+
+@media only screen and (min-width: 845px) /*and (max-width: 1000px)*/{
+
+	#logo figure {
+		width: 15%;
+	}
+
+	.p-container p {
+		font-size: 1.2em;
+	}
+
+
+
+}
+
+
+/*----------------Laptop style---------------------*/
+
+@media only screen and (min-width: 1001px) /*and (max-width: 1000px)*/{
+
+	#logo figure {
+		width: 13%;
+	}
+
+	.p-container p {
+		font-size: 1.3em;
+	}
+
+
+}
+
+
+ /*----------------Desktop style---------------------*/
+
+@media only screen and (min-width: 1450px){
+
+	#logo figure {
+		width: 12%;
+	}
+
+	.p-container p {
+		font-size: 1.4em;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
