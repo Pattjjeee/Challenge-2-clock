@@ -1,3 +1,4 @@
+function datum(){
 var today = new Date();
 
 document.getElementById('date').innerHTML = today.getDate() + '/' + (today.getMonth()+1);
@@ -8,8 +9,7 @@ document.getElementById('date').innerHTML = today.getDate() + ' ' + maanden[toda
 var dagen = new Array('zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag');
 
 document.getElementById('dag').innerHTML = dagen[today.getDay()];
-
-
+}
 
 function klok() {
 	var today = new Date();
@@ -63,6 +63,11 @@ function klok() {
 
 klok();
 setInterval(klok, 1000);
+
+datum();
+setInterval(datum, 1000);
+
+
 
 
 
